@@ -32,6 +32,12 @@ test('isValidEmail rejects invalid dot placement per RFC 5322', () => {
     assert.equal(isValidEmail('hello@example.com.'), false);
 });
 
+test('isValidEmail rejects invalid IP literal octets per RFC 5322', () => {
+    assert.equal(isValidEmail('user@[00.0.0.1]'), false);
+    assert.equal(isValidEmail('user@[192.168.00.1]'), false);
+    assert.equal(isValidEmail('user@[256.0.0.1]'), false);
+});
+
 test('getValidEmails returns only valid emails', () => {
     const users = [
         { email: 'good@example.com' },
