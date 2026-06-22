@@ -32,7 +32,27 @@ uniqueValidEmails(['User@Example.COM', 'user@example.com', 'other@test.org']);
 npm test
 ```
 
+## 문서
+
+- [강의 안내](docs/course.md) — Cursor AI를 활용한 소프트웨어개발기본과정 교재 링크
+
 ## 릴리스 노트
+
+### v1.1.0
+
+강의 안내 문서를 추가하고, 감사 로그 등 로그 파일이 저장소에 포함되지 않도록 `.gitignore`를 설정했습니다.
+
+#### ✨ 기능
+
+- **강의 안내 문서** (`docs/course.md`): 강의명과 교재 저장소 링크를 정리한 문서를 추가했습니다.
+
+#### 🐛 버그 수정
+
+- (해당 없음)
+
+#### 기타
+
+- `.gitignore`에 `*.log` 패턴을 추가해 훅 감사 로그 파일이 Git 추적 대상에서 제외되도록 했습니다.
 
 ### v1.0.0
 
